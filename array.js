@@ -1,8 +1,6 @@
 function findSecondLargest(a){
     let b= Array.from(new Set(a))
-    // return b[b.length-2]
     b.sort((a,b)=>b-a)
-    // return c[c.length-2]
     if(b.length>=2){
         return b[1]
     }

@@ -44,9 +44,9 @@ const myDebounce=(cd,d)=>{
 const myTrottle=(cd,d)=>{
    let last=0;
    return function(...args){
-    let now =new Date().getTime();
+    let now = new Date().getTime();
     if(now-last<0)return ;
     last=now
     return cd(...args)
    }
-}
+} 

@@ -61,6 +61,8 @@ console.log(a[ab1])
 console.log(a.ab1)
 console.log(a[ab2])
 console.log(a)
+
+
 let n="strin123"
 console.log(JSON.stringify(nums))
 // console.log(JSON.parse(n))
@@ -130,3 +132,39 @@ function flat(a,n){
 }
 
 console.log(flat([1,1,[2,1,3,1,4],[5,5,6,6,[7,8,9]]],2))
+function objectToString(obj){
+    let result='';
+    if(typeof obj==='object'){
+        result+='{'
+        let first=true;
+        
+        for(const key in obj){
+            if(obj.hasOwnProperty(key)){
+              if(!first){
+                result +=" "
+               }  
+               else{
+                   result+=key +" :"+ objectToString(obj[key]);
+                   first=false
+               }
+            }
+            else if(typeof obj==='string'){
+                result+='" '+ obj + '""'
+            }
+            else{
+                result+=obj
+            }
+        }
+    }
+    return result
+}
+
+
+console.log(objectToString( {
+  name: 'John',
+  age: 30,
+  address: {
+    street: '123 Main St',
+    city: 'New York',
+  },
+}))
