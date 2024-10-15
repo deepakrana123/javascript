@@ -1,0 +1,10 @@
+{
+  "name": "Devendra AddBlocker",
+  "version": "1.0",
+  "description": "Devendra AddBlocker ",
+  "permission": ["webRequest", "webRequestBlocking", "<all_urls>"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "mainfest_version": 2
+}
