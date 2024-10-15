@@ -73,7 +73,7 @@ const formatTime = (time) => {
     }
     else{
         if(hours>12){
-            hours=hours-12
+            hours = hours-12
         }
         hours = hours == 12 ? hours:String(+hours + 12);
     }
